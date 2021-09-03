@@ -12,6 +12,7 @@ public class Main {
         Address address = new Address();
 
         /*----------TASK 2---------*/
+        System.out.println("!!! Solution for TASK 2 !!!");
         Rectangle rectangle = new Rectangle();
         Scanner in = new Scanner(System.in);
 
@@ -20,12 +21,28 @@ public class Main {
         System.out.println("Введите ширину прямоугольника: ");
         double side2 = in.nextDouble();
 
-        rectangle.perimeterCalculator(side1,side2);
-        rectangle.areaCalculator(side1,side2);
+        rectangle.perimeterCalculator(side1, side2);
+        rectangle.areaCalculator(side1, side2);
 
         rectangle.result();
 
         /*----------TASK 3---------*/
-        Computer computer = new Computer();
+        System.out.println("!!! Solution fo TASK 3 !!!");
+
+        // create massive computers with type of Computer Class
+        Computer[] computers = new Computer[5];
+
+        // initialise massive with Computer Exemplars
+        for (int i = 0; i < computers.length; i++) {
+            computers[i] = new Computer();
+        }
+        // set values into variable computerName to massive
+        for (int i = 0; i < computers.length; i++) {
+            computers[i].computerName="Name of computer " +i;
+        }
+        // show result into console
+        for (Computer comp : computers) {
+            System.out.println(comp.computerName);
+        }
     }
 }
